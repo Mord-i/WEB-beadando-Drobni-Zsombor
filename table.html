@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="table.html" class="active">Táblázat</a></li>
+            <li><a href="html5.html">HTML5</a></li>
+        </ul>
+    </nav>
+    <aside>
+
+    </aside>
+
+    <div id="content">
+        <h2>CRUD Táblázat</h2>
+
+        <form id="dataForm">
+            <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="20">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="number" id="age" placeholder="Kor" required min="0" max="120">
+            <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="20">
+            <button type="submit">Hozzáadás</button>
+        </form>
+
+        <input type="text" id="searchInput" placeholder="Keresés minden oszlopban..." style="margin: 10px 0; width: 100%; padding: 8px;">
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th data-column="name">Név</th>
+                    <th data-column="email">Email</th>
+                    <th data-column="age">Kor</th>
+                    <th data-column="city">Város</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+    <footer>
+        Drobni Zsombor EV4GAC
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
