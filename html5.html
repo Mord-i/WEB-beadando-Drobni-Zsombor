@@ -8,7 +8,7 @@
 <body>
 
   <header>
-    <h1>Web-programozás-1 Előadás Házi feladat – HTML5 API-k</h1>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
   </header>
 
   <nav>
@@ -16,6 +16,7 @@
         <li><a href="index.html">Kezdőlap</a></li>
         <li><a href="table.html">Táblázat</a></li>
         <li><a href="html5.html" class="active">HTML5</a></li>
+        <li><a href="ChartJS.html">ChartJS</a></li>
     </ul>
     </nav>
   <nav>
@@ -30,60 +31,73 @@
     </ul>
   </nav>
 
-  <div id="content">
+  <div id="main-container">
+    <aside>
+        <h3>Hasznos linkek</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/hu/">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+            <li><a href="https://codepen.io/">CodePen</a></li>
+        </ul>
+        <p>Tanulj naponta egy újat – a webfejlesztés világa mindig változik!</p>
+    </aside>
 
-    <!-- 1. Web Storage -->
-    <section id="webstorage">
-      <h2>Web Storage</h2>
-      <input type="text" id="storeInput" placeholder="Írj valamit...">
-      <button onclick="localStorage.setItem('myKey', document.getElementById('storeInput').value)">Mentés</button>
-      <button onclick="alert(localStorage.getItem('myKey'))">Betöltés</button>
-    </section>
+    <div id="content">
 
-    <!-- 2. Web Worker -->
-    <section id="webworkers">
-      <h2>Web Worker</h2>
-      <button onclick="startWorker()">Számolás indítása</button>
-      <p id="workerOutput">Eredmény: </p>
-    </section>
-
-    <!-- 3. Server-Sent Events (Simulated) -->
-    <section id="sse">
-      <h2>Server-Sent Events (Szimuláció)</h2>
-      <p>Események (szimulálva JavaScript-tel):</p>
-      <div id="sseOutput">Várakozás eseményre...</div>
-    </section>
-
-    <!-- 4. Geolocation -->
-    <section id="geo">
-      <h2>Geolocation</h2>
-      <button onclick="getLocation()">Pozíció lekérése</button>
-      <p id="geoOutput"></p>
-    </section>
-
-    <!-- 5. Drag and Drop -->
-    <section id="drag">
-      <h2>Drag and Drop</h2>
-      <div id="dragTarget" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:200px;height:100px;border:1px solid #000;"></div>
-      <img id="dragImg" src="https://via.placeholder.com/50" draggable="true" ondragstart="drag(event)">
-    </section>
-
-    <!-- 6. Canvas -->
-    <section id="canvas">
-      <h2>Canvas</h2>
-      <canvas id="myCanvas" width="200" height="100"></canvas>
-    </section>
-
-    <!-- 7. SVG -->
-    <section id="svg">
-      <h2>SVG</h2>
-      <svg width="200" height="100">
-        <circle cx="50" cy="50" r="40" fill="blue" />
-        <rect x="100" y="20" width="80" height="60" fill="green"/>
-      </svg>
-    </section>
-
-  </div>
+      <!-- 1. Web Storage -->
+      <section id="webstorage">
+        <h2>Web Storage</h2>
+        <input type="text" id="storeInput" placeholder="Írj valamit...">
+        <button onclick="localStorage.setItem('myKey', document.getElementById('storeInput').value)">Mentés</button>
+        <button onclick="alert(localStorage.getItem('myKey'))">Betöltés</button>
+      </section>
+  
+      <!-- 2. Web Worker -->
+      <section id="webworkers">
+        <h2>Web Worker</h2>
+        <button onclick="startWorker()">Számolás indítása</button>
+        <p id="workerOutput">Eredmény: </p>
+      </section>
+  
+      <!-- 3. Server-Sent Events (Simulated) -->
+      <section id="sse">
+        <h2>Server-Sent Events (Szimuláció)</h2>
+        <p>Események (szimulálva JavaScript-tel):</p>
+        <div id="sseOutput">Várakozás eseményre...</div>
+      </section>
+  
+      <!-- 4. Geolocation -->
+      <section id="geo">
+        <h2>Geolocation</h2>
+        <button onclick="getLocation()">Pozíció lekérése</button>
+        <p id="geoOutput"></p>
+      </section>
+  
+      <!-- 5. Drag and Drop -->
+      <section id="drag">
+        <h2>Drag and Drop</h2>
+        <div id="dragTarget" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:200px;height:100px;border:1px solid #000;"></div>
+        <img id="dragImg" src="https://via.placeholder.com/50" draggable="true" ondragstart="drag(event)">
+      </section>
+  
+      <!-- 6. Canvas -->
+      <section id="canvas">
+        <h2>Canvas</h2>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+      </section>
+  
+      <!-- 7. SVG -->
+      <section id="svg">
+        <h2>SVG</h2>
+        <svg width="200" height="100">
+          <circle cx="50" cy="50" r="40" fill="blue" />
+          <rect x="100" y="20" width="80" height="60" fill="green"/>
+        </svg>
+      </section>
+  
+    </div>
+</div>
 
   <footer>
     Készítők: Drobni Zsombor EV4GAC

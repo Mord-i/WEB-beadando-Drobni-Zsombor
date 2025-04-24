@@ -1,9 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
+  #main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  #content {
+    flex: 1;
+    padding: 20px;
+  }
+
   header, footer {
     background-color: #333;
     color: white;
@@ -44,11 +55,6 @@ body {
   #content {
     padding: 20px;
   }
-  
-  aside {
-    padding: 10px;
-    background-color: #f0f0f0;
-  }
 
   table {
     width: 100%;
@@ -71,3 +77,54 @@ body {
     padding: 6px;
   }
   
+  
+
+  aside {
+    background-color: #f0f4f8;
+    padding: 1.5rem;
+    flex: 0 0 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    float: left;
+    font-family: Arial, sans-serif;
+  }
+
+  aside h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+  }
+
+  aside ul {
+    list-style-type: square;
+    padding-left: 1.2rem;
+  }
+
+  aside ul li {
+    margin: 0.5rem 0;
+  }
+
+  aside ul li a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+  }
+
+  aside ul li a:hover {
+    color: #1d6fa5;
+  }
+
+  aside p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  #data-table tr {
+    cursor: pointer;
+  }

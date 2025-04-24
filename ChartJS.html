@@ -12,10 +12,10 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Kezdőlap</a></li>
+            <li><a href="index.html">Kezdőlap</a></li>
             <li><a href="table.html">Táblázat</a></li>
             <li><a href="html5.html">HTML5</a></li>
-            <li><a href="ChartJS.html">ChartJS</a></li>
+            <li><a href="ChartJS.html" class="active">ChartJS</a></li>
         </ul>
     </nav>
 
@@ -32,13 +32,24 @@
         </aside>
 
         <div id="content">
-            <h2>Random tartalom</h2>
-            <p>Itt lehet bármilyen szöveg, kép vagy tábla a feladathoz.</p>
+            <h2>Dinamikus adattábla és diagram</h2>
+        
+            <label for="size">Táblázat mérete (legalább 5x5):</label>
+            <input type="number" id="size" value="5" min="5" onchange="generateTable()">
+            <button onclick="generateTable()">Tábla generálása</button>
+        
+            <table id="data-table"></table>
+        
+            <canvas id="lineChart" width="400" height="200"></canvas>
+        
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </div>
     </div>
 
     <footer>
         Drobni Zsombor EV4GAC
     </footer>
+
+    <script src="ChartJS.js"></script>
 </body>
 </html>

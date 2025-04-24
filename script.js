@@ -2,7 +2,20 @@ const form = document.getElementById('dataForm');
 const tableBody = document.querySelector('#dataTable tbody');
 const searchInput = document.getElementById('searchInput');
 
-let data = [];
+let data = [
+  { name: "Kovács Anna", email: "anna.kovacs@example.com", age: 23, city: "Budapest" },
+  { name: "Nagy Péter", email: "peter.nagy@example.com", age: 34, city: "Szeged" },
+  { name: "Tóth Réka", email: "reka.toth@example.com", age: 28, city: "Debrecen" },
+  { name: "Szabó Dániel", email: "daniel.szabo@example.com", age: 31, city: "Győr" },
+  { name: "Varga Noémi", email: "noemi.varga@example.com", age: 26, city: "Pécs" },
+  { name: "Horváth Gábor", email: "gabor.horvath@example.com", age: 45, city: "Miskolc" },
+  { name: "Farkas Emese", email: "emese.farkas@example.com", age: 22, city: "Kecskemét" },
+  { name: "Kiss László", email: "laszlo.kiss@example.com", age: 39, city: "Nyíregyháza" },
+  { name: "Balogh Júlia", email: "julia.balogh@example.com", age: 30, city: "Székesfehérvár" },
+  { name: "Molnár Kristóf", email: "kristof.molnar@example.com", age: 27, city: "Zalaegerszeg" }
+];
+
+renderTable(data);
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();

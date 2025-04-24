@@ -15,39 +15,51 @@
             <li><a href="index.html">Kezdőlap</a></li>
             <li><a href="table.html" class="active">Táblázat</a></li>
             <li><a href="html5.html">HTML5</a></li>
+            <li><a href="ChartJS.html">ChartJS</a></li>
         </ul>
     </nav>
-    <aside>
 
-    </aside>
+    <div id="main-container">
+        <aside>
+            <h3>Hasznos linkek</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/hu/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                <li><a href="https://codepen.io/">CodePen</a></li>
+            </ul>
+            <p>Tanulj naponta egy újat – a webfejlesztés világa mindig változik!</p>
+        </aside>
 
-    <div id="content">
-        <h2>CRUD Táblázat</h2>
-
-        <form id="dataForm">
-            <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="20">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="number" id="age" placeholder="Kor" required min="0" max="120">
-            <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="20">
-            <button type="submit">Hozzáadás</button>
-        </form>
-
-        <input type="text" id="searchInput" placeholder="Keresés minden oszlopban..." style="margin: 10px 0; width: 100%; padding: 8px;">
-
-        <table id="dataTable">
-            <thead>
-                <tr>
-                    <th data-column="name">Név</th>
-                    <th data-column="email">Email</th>
-                    <th data-column="age">Kor</th>
-                    <th data-column="city">Város</th>
-                    <th>Műveletek</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-
+        <div id="content">
+            <h2>CRUD Táblázat</h2>
+    
+            <form id="dataForm">
+                <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="20">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="number" id="age" placeholder="Kor" required min="0" max="120">
+                <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="20">
+                <button type="submit">Hozzáadás</button>
+            </form>
+    
+            <input type="text" id="searchInput" placeholder="Keresés minden oszlopban..." style="margin: 10px 0; width: 100%; padding: 8px;">
+    
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th data-column="name">Név</th>
+                        <th data-column="email">Email</th>
+                        <th data-column="age">Kor</th>
+                        <th data-column="city">Város</th>
+                        <th>Műveletek</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+    
+        </div>
     </div>
+
     <footer>
         Drobni Zsombor EV4GAC
     </footer>
