@@ -18,8 +18,8 @@ let chart = new Chart(ctx, {
         scales: {
             x: {
                 beginAtZero: true,
-                min: 1, // Set minimum x-axis value
-                max: 5  // Set a reasonable maximum x-axis value (or based on the data length)
+                min: 0, // Set minimum x-axis value
+                max: 100  // Set a reasonable maximum x-axis value (or based on the data length)
             },
             y: {
                 beginAtZero: true,

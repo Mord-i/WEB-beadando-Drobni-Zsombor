@@ -56,15 +56,21 @@
     padding: 20px;
   }
 
+  #data-table tr {
+    cursor: pointer;    
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
   }
   
   th, td {
     padding: 10px;
     border: 1px solid #ccc;
-    text-align: left;
+    text-align: center;
+    vertical-align: middle;
   }
   
   th {
@@ -125,6 +131,26 @@
     line-height: 1.4;
   }
 
-  #data-table tr {
-    cursor: pointer;
+  section {
+    display: none;
+  }
+  
+  section.active {
+    display: block;
+  }
+
+  #dragTarget {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem auto; /* centers the box itself horizontally */
+  }
+
+  #dragImg {
+    float: right;
   }

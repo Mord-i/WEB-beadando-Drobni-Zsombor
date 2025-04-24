@@ -1,3 +1,34 @@
+// Navigation
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  function showSection(id) {
+    sections.forEach(sec => sec.classList.remove("active"));
+    const target = document.querySelector(id);
+    if (target) {
+      target.classList.add("active");
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const sectionId = link.getAttribute("href");
+      showSection(sectionId);
+      history.replaceState(null, "", sectionId); // update the URL hash
+    });
+  });
+
+  // Show section based on current URL hash (if any)
+  const initialHash = window.location.hash;
+  if (initialHash) {
+    showSection(initialHash);
+  } else {
+    sections[0].classList.add("active"); // default to the first section
+  }
+});
+
 // Web Worker
 let worker;
 function startWorker() {
