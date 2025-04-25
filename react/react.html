@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>React SPA – Két alkalmazás</title>
+  </head>
+  <body>
+    <header>
+      <h1>Web-programozás-1 – React Házi Feladat</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Kezdőlap</a></li>
+        <li><a href="../table/table.html">Táblázat</a></li>
+        <li><a href="../HTML5/html5.html">HTML5</a></li>
+        <li><a href="../ChartJS/ChartJS.html">ChartJS</a></li>
+        <li><a href="#" onclick="navigate('app1')">Alkalmazás 1</a></li>
+        <li><a href="#" onclick="navigate('app2')">Alkalmazás 2</a></li>
+      </ul>
+    </nav>
+
+    <div id="main-container">
+      <aside>
+        <h3>Hasznos linkek</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/hu/">MDN Web Docs</a></li>
+          <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+          <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+          <li><a href="https://codepen.io/">CodePen</a></li>
+        </ul>
+        <p>Tanulj naponta egy újat – a webfejlesztés világa mindig változik!</p>
+      </aside>
+
+      <div id="content">
+        <div id="react-root"></div>
+      </div>
+    </div>
+
+    <footer>
+      Drobni Zsombor EV4GAC
+    </footer>
+
+    <script>
+      // Simulated SPA behavior: load different apps into the same container
+      function navigate(app) {
+        const root = document.getElementById("react-root");
+        if (app === "app1") {
+          root.innerHTML = '<div id="app1-root"></div>';
+          loadScript("app1/dist/bundle.js");
+        } else if (app === "app2") {
+          root.innerHTML = '<div id="app2-root"></div>';
+          loadScript("app2/dist/bundle.js");
+        }
+      }
+
+      function loadScript(src) {
+        const existing = document.querySelector("script[data-dynamic]");
+        if (existing) existing.remove();
+
+        const script = document.createElement("script");
+        script.src = src;
+        script.dataset.dynamic = true;
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html>
