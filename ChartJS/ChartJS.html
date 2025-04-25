@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,10 +12,10 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Kezdőlap</a></li>
-            <li><a href="table.html">Táblázat</a></li>
-            <li><a href="html5.html">HTML5</a></li>
-            <li><a href="ChartJS.html" class="active">ChartJS</a></li>
+            <li><a href="../index.html">Kezdőlap</a></li>
+            <li><a href="../table/table.html">Táblázat</a></li>
+            <li><a href="../HTML5/html5.html">HTML5</a></li>
+            <li><a href="../ChartJS/ChartJS.html" class="active">ChartJS</a></li>
         </ul>
     </nav>
 
@@ -37,6 +37,7 @@
             <label for="size">Táblázat mérete (legalább 5x5):</label>
             <input type="number" id="size" value="5" min="5" onchange="generateTable()">
             <button onclick="generateTable()">Tábla generálása</button>
+            <p><br></p>
         
             <table id="data-table"></table>
         
