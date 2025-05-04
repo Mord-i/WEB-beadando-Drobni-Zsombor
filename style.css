@@ -166,3 +166,22 @@ section.active {
 #dragImg {
   float: right;
 }
+
+#oojs-widget {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+#oojs-widget input, #oojs-widget select, #oojs-widget button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+#greeting-output {
+  font-weight: bold;
+  margin-top: 1rem;
+}

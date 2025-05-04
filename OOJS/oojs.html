@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-programozás-1 Előadás Házi feladat</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Kezdőlap</a></li>
+            <li><a href="../table/table.html">Táblázat</a></li>
+            <li><a href="../HTML5/html5.html">HTML5</a></li>
+            <li><a href="../ChartJS/ChartJS.html">ChartJS</a></li>
+            <li><a href="../OOJS/oojs.html" class="active">OOJS</a></li>
+        </ul>
+    </nav>
+
+    <div id="main-container">
+        <aside>
+            <h3>Hasznos linkek</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/hu/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                <li><a href="https://codepen.io/">CodePen</a></li>
+            </ul>
+            <p>Tanulj naponta egy újat – a webfejlesztés világa mindig változik!</p>
+        </aside>
+
+        <div id="content">
+
+            <div id="oojs-widget"></div>
+
+        </div>
+    </div>
+
+    <footer>
+        Drobni Zsombor EV4GAC
+    </footer>
+
+    <script>
+        class GreetingApp {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.greetings = {
+                    hu: "Szia",
+                    en: "Hello",
+                    de: "Hallo",
+                    fr: "Salut"
+                };
+                this.render();
+            }
+
+            render() {
+                this.container.innerHTML = `
+                    <div id="oojs-widget">
+                        <h3>Név alapú üdvözlő modul</h3>
+                        <input type="text" id="nameInput" placeholder="Írd be a neved">
+                        <select id="languageSelect">
+                            <option value="hu">Magyar</option>
+                            <option value="en">Angol</option>
+                            <option value="de">Német</option>
+                            <option value="fr">Francia</option>
+                        </select>
+                        <button id="generateBtn">Üdvözlés generálása</button>
+                        <div id="greeting-output"></div>
+                    </div>
+                `;
+                document.getElementById("generateBtn").addEventListener("click", () => this.generateGreeting());
+            }
+
+            generateGreeting() {
+                const name = document.getElementById("nameInput").value.trim();
+                const lang = document.getElementById("languageSelect").value;
+                const output = document.getElementById("greeting-output");
+
+                if (!name) {
+                    output.textContent = "Kérlek, adj meg egy nevet.";
+                    output.style.color = "red";
+                    return;
+                }
+
+                const greeting = this.greetings[lang] || this.greetings["hu"];
+                output.textContent = `${greeting}, ${name}!`;
+                output.style.color = "green";
+            }
+        }
+
+        new GreetingApp("oojs-widget");
+    </script>
+</body>
+</html>
